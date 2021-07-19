@@ -1,3 +1,51 @@
+
+
+.top{
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 0.5px black;
+}
+.icon-img{
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    width: auto;
+    height: 200px;
+    border-radius: 50%;
+}
+.top-name{
+    display: flex; 
+    flex-direction: column;
+    
+}
+
+h1{
+    font-size: 100px;
+    margin-top: 80px;
+    margin-bottom: 0%;
+}
+h5{
+    font-size: 30px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+body{
+    margin: auto;
+}
+header{
+    border-bottom: solid 1px black;
+}
+
 ul{
     list-style-type: none;
+}
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.nav-list-item{
+    font-size: 15px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
