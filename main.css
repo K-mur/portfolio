@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: row;
     border-bottom: solid 0.5px black;
+   
 }
 
 
@@ -87,4 +88,18 @@ h2{
 }
 .about-text{
     flex: 1;
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: solid 1px black;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.adress{
+    margin-top: 10px;
 }
