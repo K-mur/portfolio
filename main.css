@@ -22,6 +22,7 @@ ul{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-right: 40px;
 }
 .nav-list-item{
     font-size: 15px;
@@ -40,7 +41,7 @@ ul{
   background-color: #eee;
   background-size: cover;
   background-position: center center;
-  border-bottom: solid 1px black;
+
 }
 h1{
     font-size: 100px;
@@ -53,7 +54,8 @@ h5{
     flex-direction: column;
     text-align: center;
     height: 600px;
-    border-bottom: solid 1px black;
+
+    background-color: rgb(235, 235, 235);
 }
 .works-item{
     display: flex;
@@ -86,7 +88,8 @@ h2{
     flex-direction: column;
     text-align: center;
     height: 600px;
-    border-bottom: solid 1px black;
+
+    background-color: white;
 }
 .about-item{
     display: flex;
@@ -107,12 +110,25 @@ h2{
     display: flex;
     flex-direction: column;
     text-align: center;
-    border-bottom: solid 1px black;
+ 
+    height: 500px;
+    background-color: white;
+}
+.skill-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.skill-icon{
+    margin-right: 100px;
+    margin-left: 100px;
 }
 .contact{
     display: flex;
     flex-direction: column;
     text-align: center;
+    background-color: gray;
+    height: 100px;
 }
 .adress{
     margin-top: 10px;
