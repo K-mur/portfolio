@@ -30,15 +30,38 @@ a{
 .item:hover{
     color: blue;
 }
+.made-of{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-image: url(../img/Blender_23505.png);
+    width: 250px;
+    height: 250px;
+
+}
+.made-of2{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-image: url(../img/maya.png);
+    width: 250px;
+    height: 250px;
+
+}
+.m-text{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 0%;
+}
 .gallery-1{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 50px;
 }
 .gallery-item{
     margin: 30px;
     margin-bottom: 0%;
-    margin-top: 50px;
     background-color: white;
     border-bottom:solid 2px blue;
 }
