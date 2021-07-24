@@ -44,6 +44,9 @@ iframe{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    opacity: 0;
+    transform: translate(0, 100px); /* フェードインで動く高さを指定 */
+    transition: all 2000ms; /* フェードインにかかる時間を指定 */
 }
 .kiri{
     display: flex;
@@ -57,6 +60,9 @@ iframe{
     display: flex;
     text-align: center;
     flex-direction: column;
+    opacity: 0;
+    transform: translate(0, 100px); /* フェードインで動く高さを指定 */
+    transition: all 2000ms; /* フェードインにかかる時間を指定 */
 }
 p{
     margin-left: 30px;
@@ -73,6 +79,9 @@ video{
     display: flex;
     text-align: center;
     flex-direction: column;
+    opacity: 0;
+    transform: translate(0, 100px); /* フェードインで動く高さを指定 */
+    transition: all 2000ms; /* フェードインにかかる時間を指定 */
 }
 .vid{
     margin: 20px;
@@ -81,6 +90,9 @@ video{
 .proto{
     display: flex;
     flex-direction: row;
+    opacity: 0;
+    transform: translate(0, 100px); /* フェードインで動く高さを指定 */
+    transition: all 2000ms; /* フェードインにかかる時間を指定 */
 }
 .proto-text{
     margin-top: 160px;
@@ -128,4 +140,20 @@ video{
     left: 0;
     margin: auto;
     text-align: center;
+  }
+  .effect-scroll-1 {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  .effect-scroll-2{
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  .effect-scroll-3 {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  .effect-scroll-4 {
+    opacity: 1;
+    transform: translate(0, 0);
   }
