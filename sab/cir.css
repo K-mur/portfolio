@@ -1,17 +1,13 @@
 body{
     margin: 0%;
 }
-.gallery-container {
-    
-    display: flex;
-  flex-wrap: wrap;
-  }
 header{
     border-bottom: solid 1px black;
 }
 ul{
     list-style-type: none;
 }
+
 .nav-list{
     display: flex;
     flex-direction: row;
@@ -29,4 +25,12 @@ a{
 }
 .item:hover{
     color: blue;
+}
+.mov{
+    height: 550px;
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    width: 1500px;
 }
