@@ -90,7 +90,12 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background-image: url(./img/photos/all.png);
+    background-size: 600px;
+    height: 455px;
+    margin-left: 100px;
+    margin-right: 21px;
+    border-radius: 10%;
 }
 h2{
     font-size: 60px;
