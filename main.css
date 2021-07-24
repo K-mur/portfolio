@@ -1,13 +1,9 @@
 
-
-.top{
+.top-header{
     display: flex;
     flex-direction: row;
-    border-bottom: solid 0.5px black;
-   
+    justify-content: center;
 }
-
-
 body{
     margin: auto;
 }
@@ -25,14 +21,18 @@ ul{
     margin-right: 40px;
 }
 .nav-list-item{
-    font-size: 15px;
+    font-size: 25px;
     margin-left: 100px;
     margin-right: 100px;
+}
+.item:hover{
+    color: blue;
 }
 .title{
   margin: 0;
   padding: 0%;
   min-height: 80vh;
+  
   position: relative;
   display: flex;
   flex-direction: column;
@@ -45,18 +45,22 @@ ul{
 }
 h1{
     font-size: 100px;
-}
-h5{
-    font-size: 30px;
+    font-family: 'EB Garamond', serif;
 }
 .works{
     display: flex;
     flex-direction: column;
     text-align: center;
     height: 600px;
-
     background-color: rgb(235, 235, 235);
+    opacity: 0;
+    transform: translate(0, 100px); /* フェードインで動く高さを指定 */
+    transition: all 2000ms; /* フェードインにかかる時間を指定 */
 }
+.effect-scroll-1 {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 .works-item{
     display: flex;
     flex-direction: row;
@@ -66,6 +70,7 @@ h5{
 a{
     text-decoration: none;
     color: rgb(51, 51, 51);
+    font-family: 'EB Garamond', serif;
 }
 .club{
     flex: 1;
@@ -82,15 +87,22 @@ a{
 h2{
     font-size: 40px;
     margin-top: 50px;
+    font-family: 'EB Garamond', serif;
 }
 .ABOUT{
     display: flex;
     flex-direction: column;
     text-align: center;
     height: 600px;
-
     background-color: white;
+    opacity: 0;
+    transform: translate(0, 100px); /* フェードインで動く高さを指定 */
+    transition: all 2000ms; /* フェードインにかかる時間を指定 */
 }
+.effect-scroll-2 {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 .about-item{
     display: flex;
     flex-direction: row;
@@ -110,10 +122,16 @@ h2{
     display: flex;
     flex-direction: column;
     text-align: center;
- 
     height: 500px;
     background-color: white;
+    opacity: 0;
+    transform: translate(0, 100px); /* フェードインで動く高さを指定 */
+    transition: all 2000ms; /* フェードインにかかる時間を指定 */
 }
+.effect-scroll-3 {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 .skill-item{
     display: flex;
     flex-direction: row;
@@ -130,6 +148,54 @@ h2{
     background-color: gray;
     height: 100px;
 }
+h3{
+    font-family: 'EB Garamond', serif;
+}
 .adress{
     margin-top: 10px;
+    font-family: 'EB Garamond', serif;
 }
+#page_top{
+    width: 100px;
+    height: 60px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: #9b9b9b;
+    opacity: 0.6;
+  }
+  #page_top a{
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 60px;
+    text-decoration: none;
+  }
+  #page_top a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -25px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+  #page_top a::after{
+    content: 'PAGE TOP';
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }

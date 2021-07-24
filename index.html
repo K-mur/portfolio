@@ -7,20 +7,96 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://k-mur.github.io/portfolio/main.css/">
+    <script src="./js/jquery-3.6.0.min.js"></script> 
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <script>
+      $(function () {
+      $(window).scroll(function () {
+      $(".ABOUT").each(function () {
+      var elemPos = $(this).offset().top; /* 要素の位置を取得 */
+      var scroll = $(window).scrollTop(); /* スクロール位置を取得 */
+      var windowHeight = $(window).height(); /* 画面幅を取得（画面の下側に入ったときに動作させるため） */
+      if (scroll > elemPos - windowHeight) {
+        /* 要素位置までスクロール出来たときに動作する */
+        $(this).addClass("effect-scroll-2");
+      }
+    });
+  });
+});
+    </script>
+    <script>
+      $(function () {
+      $(window).scroll(function () {
+      $(".works").each(function () {
+      var elemPos = $(this).offset().top; /* 要素の位置を取得 */
+      var scroll = $(window).scrollTop(); /* スクロール位置を取得 */
+      var windowHeight = $(window).height(); /* 画面幅を取得（画面の下側に入ったときに動作させるため） */
+      if (scroll > elemPos - windowHeight) {
+        /* 要素位置までスクロール出来たときに動作する */
+        $(this).addClass("effect-scroll-1");
+      }
+    });
+  });
+});
+    </script>
+       </script>
+       <script>
+         $(function () {
+         $(window).scroll(function () {
+         $(".skill").each(function () {
+         var elemPos = $(this).offset().top; /* 要素の位置を取得 */
+         var scroll = $(window).scrollTop(); /* スクロール位置を取得 */
+         var windowHeight = $(window).height(); /* 画面幅を取得（画面の下側に入ったときに動作させるため） */
+         if (scroll > elemPos - windowHeight) {
+           /* 要素位置までスクロール出来たときに動作する */
+           $(this).addClass("effect-scroll-3");
+         }
+       });
+     });
+   });
+       </script>
+    <script>
+      jQuery(function() {
+  var appear = false;
+  var pagetop = $('#page_top');
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {  //100pxスクロールしたら
+      if (appear == false) {
+        appear = true;
+        pagetop.stop().animate({
+          'bottom': '50px' //下から50pxの位置に
+        }, 300); //0.3秒かけて現れる
+      }
+    } else {
+      if (appear) {
+        appear = false;
+        pagetop.stop().animate({
+          'bottom': '-50px' //下から-50pxの位置に
+        }, 300); //0.3秒かけて隠れる
+      }
+    }
+  });
+  pagetop.click(function () {
+    $('body, html').animate({ scrollTop: 0 }, 500); //0.5秒かけてトップへ戻る
+    return false;
+  });
+});
+
+    </script>
 </head>
 <body>
   <header class="top-header">
       <nav class="nav-display">
           <ul class="nav-list">
-            <li class="nav-list-item"><a href="#sec1">ABOUT</a></li>
-            <li class="nav-list-item"><a href="#sec2">WORKS</a></li>
-            <li class="nav-list-item"><a href="#sec3">SKILL</a></li>
+            <li class="nav-list-item"><a class="item" href="#sec1">ABOUT</a></li>
+            <li class="nav-list-item"><a class="item" href="#sec2">WORKS</a></li>
+            <li class="nav-list-item"><a class="item" href="#sec3">SKILL</a></li>
           </ul>
       </nav>
   </header>
   <div class="title">
     <h1>portfolio</h1>
-    <h5>x20026 木村颯汰</h5>
   </div>
   <div class="ABOUT" id="sec1">
     <h2 class="about-title">ABOUT</h2>
@@ -37,10 +113,10 @@
     <h2>WORKS</h2>
     <div class="works-item">
       <div class="club">
-        <a href="./sab/cir.html"><h2>club works</h2></a>
+        <a class="item" href="./sab/cir.html"><h2>club works</h2></a>
       </div>
       <div class="origi">
-        <a href="./sab/ori.html"><h2>original works</h2></a>
+        <a class="item" href="./sab/ori.html"><h2>original works</h2></a>
       </div>
     </div>
   </div>
@@ -64,5 +140,7 @@
     <h3>CONTACT</h3>
     <p class="adress">x20026xx@aitech.ac.jp</p>
   </div>
+  <div id="page_top"><a href="#"></a></div>
+
 </body>
 </html>
