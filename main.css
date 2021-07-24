@@ -78,6 +78,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    
     background-image: url(./img/teamai.jpeg);
     background-size: 600px;
     height: 455px;
