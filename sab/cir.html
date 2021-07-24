@@ -6,7 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="cir.css">
+    <script src="../js/jquery-3.6.0.min.js"></script> 
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <script>
+        jQuery(function() {
+    var appear = false;
+    var pagetop = $('#page_top');
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {  //100pxスクロールしたら
+        if (appear == false) {
+          appear = true;
+          pagetop.stop().animate({
+            'bottom': '50px' //下から50pxの位置に
+          }, 300); //0.3秒かけて現れる
+        }
+      } else {
+        if (appear) {
+          appear = false;
+          pagetop.stop().animate({
+            'bottom': '-50px' //下から-50pxの位置に
+          }, 300); //0.3秒かけて隠れる
+        }
+      }
+    });
+    pagetop.click(function () {
+      $('body, html').animate({ scrollTop: 0 }, 500); //0.5秒かけてトップへ戻る
+      return false;
+    });
+  });
+  
+      </script>
 </head>
 <body>
     <header>
@@ -35,8 +65,13 @@
         </div>
         
     </div>
-    <div>
-        <video src="../mov/prottype.mp4" controls></video>
+    <div class="proto">
+        <div class="vid">
+            <video src="../mov/prottype.mp4" controls></video>
+        </div>
+        <div class="proto-text">
+            <p>素材のない初期段階時<br>私が担当したパートです</p>
+        </div>
     </div>
     
     <div class="soft">
@@ -47,5 +82,6 @@
         </div>
         
     </div>
+    <div id="page_top"><a href="#"></a></div>
 </body>
 </html>
