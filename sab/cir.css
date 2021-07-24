@@ -20,6 +20,7 @@ ul{
     margin-right: 100px;
 }
 a{
+    font-family: 'EB Garamond', serif;
     text-decoration: none;
     color: rgb(51, 51, 51);
 }
@@ -33,4 +34,39 @@ a{
 }
 iframe{
     width: 1500px;
+}
+.k{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.kiri{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.kiri-item{
+    width: 500px;
+}
+.A{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+p{
+    margin-left: 30px;
+    font-size: 20px;
+}
+video{
+    width: 800px;
+}
+.image-item{
+    height: 100px;
+    width: auto;
+}
+.soft{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
 }
