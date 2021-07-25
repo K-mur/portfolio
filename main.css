@@ -32,7 +32,6 @@ ul{
   margin: 0;
   padding: 0%;
   min-height: 80vh;
-  
   position: relative;
   display: flex;
   flex-direction: column;
@@ -41,6 +40,7 @@ ul{
   background-color: #eee;
   background-size: cover;
   background-position: center center;
+  background-image: url(./img/photos/01_1.png);
 
 }
 h1{
@@ -78,7 +78,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     background-image: url(./img/teamai.jpeg);
     background-size: 600px;
     height: 455px;
