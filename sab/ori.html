@@ -6,6 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="ori.css">
+    <link rel="stylesheet" href="../lightbox/lightbox.css">
+    <script src="../js/jquery-3.6.0.min.js"></script> 
+    <script src="../lightbox/lightbox.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <script>
+        jQuery(function() {
+    var appear = false;
+    var pagetop = $('#page_top');
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {  //100pxスクロールしたら
+        if (appear == false) {
+          appear = true;
+          pagetop.stop().animate({
+            'bottom': '50px' //下から50pxの位置に
+          }, 300); //0.3秒かけて現れる
+        }
+      } else {
+        if (appear) {
+          appear = false;
+          pagetop.stop().animate({
+            'bottom': '-50px' //下から-50pxの位置に
+          }, 300); //0.3秒かけて隠れる
+        }
+      }
+    });
+    pagetop.click(function () {
+      $('body, html').animate({ scrollTop: 0 }, 500); //0.5秒かけてトップへ戻る
+      return false;
+    });
+  });
+    </script>
+    
 </head>
 <body>
     <header>
@@ -24,25 +57,25 @@
     <div class="gallery-1">
         <div class="gallery-item">
             <div class="gallery-img">
-                <img src="../img/photos/kyara1.png" alt="キャラクター">
+                <a class="image" href="../img/photos/kyara1.png" data-lightbox="image"><img class="image" src="../img/photos/kyara1.png" alt="キャラクター"></a>
             </div>
             <p class="text">キャラクター</p>
         </div>
         <div class="gallery-item">
             <div class="gallery-img">
-                <img src="../img/photos/kyara2.png" alt="キャラクター">
+                <a class="image" href="../img/photos/kyara2.png" data-lightbox="image"><img class="image" src="../img/photos/kyara2.png" alt="キャラクター"></a>
             </div>
             <p class="text">キャラクター</p>
         </div>
         <div class="gallery-item">
             <div class="gallery-img">
-                <img src="../img/photos/kyara3.png" alt="キャラクター">
+                <a class="image" href="../img/photos/kyara3.png" data-lightbox="image"><img class="image" src="../img/photos/kyara3.png" alt="キャラクター"></a>
             </div>
             <p class="text">キャラクター</p>
         </div>
         <div class="gallery-item">
             <div class="gallery-img">
-                <img src="../img/photos/kyara4.png" alt="キャラクター">
+                <a class="image" href="../img/photos/kyara4.png" data-lightbox="image"><img class="image" src="../img/photos/kyara4.png" alt="キャラクター"></a>
             </div>
             <p class="text">キャラクター</p>
         </div>
@@ -50,25 +83,25 @@
     <div class="gallery-1">
         <div class="gallery-item">
             <div class="gallery-img">
-                <img src="../img/photos/oukan.png" alt="王冠">
+                <a class="image" href="../img/photos/oukan.png" data-lightbox="image"><img class="image" src="../img/photos/oukan.png" alt="王冠"></a>
             </div>
             <p class="text">王冠</p>
         </div>
         <div class="gallery-item">
             <div class="gallery-img">
-                <img src="../img/photos/kyandi.png" alt="キャンディ">
+                <a class="image" href="../img/photos/kyandi.png" data-lightbox="image"><img class="image" src="../img/photos/kyandi.png" alt="キャンディ"></a>
             </div>
             <p class="text">キャンディ</p>
         </div>
         <div class="gallery-item">
             <div class="gallery-img">
-                <img src="../img/photos/book.png" alt="本">
+                <a class="image" href="../img/photos/book.png" data-lightbox="image"><img class="image" src="../img/photos/book.png" alt="本"></a>
             </div>
             <p class="text">本</p>
         </div>
         <div class="gallery-item">
             <div class="gallery-img">
-                <img src="../img/photos/deskpng.png" alt="机">
+                <a class="image" href="../img/photos/deskpng.png" data-lightbox="image"><img class="image" src="../img/photos/deskpng.png" alt="机"></a>
             </div>
             <p class="text">机</p>
         </div>
@@ -82,48 +115,49 @@
     <div class="gallery-1">
         <div class="gallery-item">
             <div class="gallery-img">
-                <img src="../img/photos/dishes_2.png" alt="食器">
+                <a class="image" href="../img/photos/dishes_2.png" data-lightbox="image"><img class="image" src="../img/photos/dishes_2.png" alt="食器"></a>
             </div>
-            <p class="text">銀食器</p>
+            <p class="text">ポット１</p>
         </div>
         <div class="gallery-item">
             <div class="gallery-img">
-                <img src="../img/photos/dishes_3.png" alt="キャンディ">
+                <a class="image" href="../img/photos/dishes_3.png" data-lightbox="image"><img class="image" src="../img/photos/dishes_3.png" alt="食器"></a>
             </div>
-            <p class="text">キャンディ</p>
+            <p class="text">ポット２</p>
         </div>
         <div class="gallery-item">
             <div class="gallery-img">
-                <img src="../img/photos/dishes_4.png" alt="本">
+                <a class="image" href="../img/photos/dishes_4.png" data-lightbox="image"><img class="image" src="../img/photos/dishes_4.png" alt="食器"></a>
             </div>
-            <p class="text">本</p>
+            <p class="text">鍋</p>
         </div>
         <div class="gallery-item">
             <div class="gallery-img">
-                <img src="../img/photos/dishes_5.png" alt="机">
+                <a class="image" href="../img/photos/dishes_5.png" data-lightbox="image"><img class="image" src="../img/photos/dishes_5.png" alt="食器"></a>
             </div>
-            <p class="text">机</p>
+            <p class="text">ポット３</p>
         </div>
     </div>
     <div class="gallery-1">
         <div class="gallery-item">
             <div class="gallery-img">
-                <img src="../img/photos/dishes_6.png" alt="王冠">
+                <a class="image" href="../img/photos/dishes_6.png" data-lightbox="image"><img class="image" src="../img/photos/dishes_6.png" alt="食器"></a>
             </div>
-            <p class="text">王冠</p>
+            <p class="text">クローシュ</p>
         </div>
         <div class="gallery-item">
             <div class="gallery-img">
-                <img src="../img/photos/dishes_7.png" alt="キャンディ">
+                <a class="image" href="../img/photos/dishes_7.png" data-lightbox="image"><img class="image" src="../img/photos/dishes_7.png" alt="食器"></a>
             </div>
-            <p class="text">キャンディ</p>
+            <p class="text">皿＋カトラリー</p>
         </div>
         <div class="gallery-item">
             <div class="gallery-img">
-                <img src="../img/photos/dishes_1.png" alt="本">
+                <a class="image" href="../img/photos/dishes_1.png" data-lightbox="image"><img class="image" src="../img/photos/dishes_1.png" alt="食器"></a>
             </div>
-            <p class="text">本</p>
+            <p class="text">銀食器</p>
         </div>
     </div>
+    <div id="page_top"><a href="#"></a></div>
 </body>
 </html>
